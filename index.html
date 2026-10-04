@@ -32,10 +32,11 @@
     </section>
 
     <form class="event-form hidden" id="event-form">
-      <div class="form-title"><div><p class="eyebrow">NEW DATE</p><h3>어떤 날을 기다리고 있나요?</h3></div><button type="button" class="close-button" id="close-form" aria-label="닫기">×</button></div>
+      <div class="form-title"><div><p class="eyebrow">NEW DATE</p><h3 id="form-heading">어떤 날을 기다리고 있나요?</h3></div><button type="button" class="close-button" id="close-form" aria-label="닫기">×</button></div>
       <label>일정 이름<input id="event-name" type="text" maxlength="50" placeholder="예: 자격증 시험" required></label>
       <label>날짜<input id="event-date" type="date" required></label>
-      <button class="submit-button" type="submit">일정 저장 <span>→</span></button>
+      <label>메모 <span class="optional">(선택 · 최대 두 줄)</span><textarea id="event-note" rows="2" maxlength="240" placeholder="장소, 준비물, 공부할 내용 등을 적어두세요"></textarea></label>
+      <button class="submit-button" type="submit"><span id="submit-label">일정 저장</span> <span>→</span></button>
     </form>
 
     <section id="event-list" class="event-list" aria-live="polite"></section>
@@ -44,6 +45,5 @@
   <script src="app.js"></script>
 </body>
 </html>
-
 
 
