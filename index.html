@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>오늘까지, 얼마나?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="첫 화면"><span class="brand-mark">D</span><span>daybook</span></a>
+      <span class="local-note"><i></i> 이 기기에 저장돼요</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">MY UPCOMING DAYS</p>
+      <h1>기다리는 날까지,<br><em>얼마나 남았을까요?</em></h1>
+      <p class="subhead">중요한 날을 적어두면 오늘 기준으로 남은 시간을 세어드려요.</p>
+    </section>
+
+    <section class="summary" aria-live="polite">
+      <div><span class="summary-label">가장 가까운 일정</span><strong id="next-title">불러오는 중</strong></div>
+      <div class="summary-count"><strong id="next-count">—</strong><span>일 남음</span></div>
+      <div class="today"><span>오늘</span><strong id="today-date"></strong></div>
+    </section>
+
+    <section class="section-heading">
+      <div><p class="eyebrow">YOUR LIST</p><h2>다가오는 일정 <span id="event-count">0</span></h2></div>
+      <button class="add-button" id="open-form"><span>＋</span> 일정 추가</button>
+    </section>
+
+    <form class="event-form hidden" id="event-form">
+      <div class="form-title"><div><p class="eyebrow">NEW DATE</p><h3>어떤 날을 기다리고 있나요?</h3></div><button type="button" class="close-button" id="close-form" aria-label="닫기">×</button></div>
+      <label>일정 이름<input id="event-name" type="text" maxlength="50" placeholder="예: 자격증 시험" required></label>
+      <label>날짜<input id="event-date" type="date" required></label>
+      <button class="submit-button" type="submit">일정 저장 <span>→</span></button>
+    </form>
+
+    <section id="event-list" class="event-list" aria-live="polite"></section>
+    <footer><span>하루씩 차근차근, 잘하고 있어요.</span><span>DAYBOOK · 2026</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
